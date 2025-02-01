@@ -1,0 +1,30 @@
+/*
+- Spacing System
+2 / 4 / 8 / 12 / 16 / 24/ 32/ 48 / 64 / 80/ 96/ 128
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(250, 61, 61, 0.506), rgba(249, 49, 49, 0.495)),
+    url('/images/bg-intro-desktop.png');
+}
+
+section {
+  padding: 8rem 4.8rem;
+  border: 1px solid green;
+}
+
+.container-grid {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
