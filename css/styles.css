@@ -9,12 +9,19 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(250, 61, 61, 0.506), rgba(249, 49, 49, 0.495)),
+  background-image: linear-gradient(rgba(250, 61, 61, 0.628), rgba(249, 49, 49, 0.658)),
     url('/images/bg-intro-desktop.png');
 }
 
@@ -27,4 +34,104 @@ section {
   display: grid;
   column-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.container-header,
+.container-cta {
+  width: 100%;
+  max-width: 580px;
+  padding: 2rem;
+}
+
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading-primary {
+  font-size: 5rem;
+  letter-spacing: -0.52px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.content-primary {
+  font-size: 1.6rem;
+}
+
+.btn {
+  display: block;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.btn-purple {
+  background-color: hsl(248, 32%, 49%);
+  box-shadow: 0px 6px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-green {
+  background-color: hsl(154, 59%, 51%);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  padding: 4rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  margin-bottom: 2px;
+}
+
+.terms-text {
+  color: hsl(246, 25%, 77%);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.terms-highlight {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
+
+i.fa-circle-exclamation {
+  color: hsl(0, 100%, 74%);
+  display: inline-block;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  visibility: hidden;
+}
+
+small {
+  font-size: 1.1rem;
+  color: hsl(0, 100%, 74%);
+  position: absolute;
+  right: 0;
+  visibility: hidden;
 }
