@@ -78,8 +78,11 @@ section {
 }
 
 .btn-green {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
   background-color: hsl(154, 59%, 51%);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 1px hsla(154, 58%, 36%, 0.752);
 }
 
 .form {
@@ -97,7 +100,7 @@ section {
 .form-control input {
   display: block;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid #f0f0f0;
   border-radius: 4px;
   font-family: inherit;
@@ -105,6 +108,10 @@ section {
   font-weight: 500;
   letter-spacing: 0.25px;
   margin-bottom: 2px;
+}
+
+.form-control input.error {
+  border: 2px solid hsl(0, 100%, 74%);
 }
 
 .terms-text {
@@ -123,7 +130,7 @@ i.fa-circle-exclamation {
   display: inline-block;
   font-size: 20px;
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 30px;
   visibility: hidden;
 }
