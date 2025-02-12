@@ -107,22 +107,10 @@ section {
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.25px;
-  margin-bottom: 2px;
 }
 
-.form-control input.error {
+.form-control.error input {
   border: 2px solid hsl(0, 100%, 74%);
-}
-
-.terms-text {
-  color: hsl(246, 25%, 77%);
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-.terms-highlight {
-  color: hsl(0, 100%, 74%);
-  font-weight: 700;
 }
 
 i.fa-circle-exclamation {
@@ -135,10 +123,26 @@ i.fa-circle-exclamation {
   visibility: hidden;
 }
 
-small {
+.form-control small {
   font-size: 1.1rem;
   color: hsl(0, 100%, 74%);
   position: absolute;
   right: 0;
   visibility: hidden;
+}
+
+/* any <small> elements inside a div.form-control with also a class of 'error' */
+.form-control.error small {
+  visibility: visible;
+}
+
+.terms-text {
+  color: hsl(246, 25%, 77%);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.terms-highlight {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
 }
