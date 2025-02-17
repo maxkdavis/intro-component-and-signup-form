@@ -83,6 +83,12 @@ section {
   letter-spacing: 1px;
   background-color: hsl(154, 59%, 51%);
   box-shadow: 0px 4px 1px hsla(154, 58%, 36%, 0.752);
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.btn-green:hover {
+  background-color: hsla(154, 59%, 51%, 0.645);
 }
 
 .form {
@@ -121,6 +127,10 @@ i.fa-circle-exclamation {
   top: 15px;
   right: 30px;
   visibility: hidden;
+}
+
+.form-control.error i {
+  visibility: visible;
 }
 
 .form-control small {
