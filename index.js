@@ -6,31 +6,41 @@ const passwordInputEl = document.getElementById('password');
 
 formEl.addEventListener('submit', function (e) {
   e.preventDefault();
+  checkInputs();
+});
 
-  if (firstNameInputEl.value === '') {
+function checkInputs() {
+  // .trim() method will remove any whitespaces
+  const firstNameValue = firstNameInputEl.value.trim();
+  const lastNameValue = lastNameInputEl.value.trim();
+  const emailValue = emailInputEl.value.trim();
+  const passwordValue = passwordInputEl.value.trim();
+
+  if (firstNameValue === '') {
     setError(firstNameInputEl, 'First name cannot be blank');
   }
 
-  if (lastNameInputEl.value === '') {
+  if (lastNameValue === '') {
     setError(lastNameInputEl, 'Last name cannot be blank');
   }
 
-  if (emailInputEl === '') {
+  if (emailValue === '') {
     setError(emailInputEl, 'Email cannot be blank');
-  } else if (!isEmail(emailInputEl)) {
-    setError(emailInputEl, 'Email is not valid');
+  } else if (!isEmail(emailValue)) {
+    setError(emailInputEl, 'Looks like this is not an email');
+    emailInputEl.placeholder = 'email@example/com';
   }
 
-  if (passwordInputEl === '') {
+  if (passwordValue === '') {
     setError(passwordInputEl, 'Password cannot be blank');
   }
-});
+}
 
 function setError(input, message) {
   const inputParent = input.parentElement;
   const smallEl = inputParent.querySelector('small');
 
-  input.placeholder = '';
+  // input.placeholder = '';
 
   smallEl.style.visibility = 'visible';
   smallEl.innerText = message;
