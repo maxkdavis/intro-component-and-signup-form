@@ -18,10 +18,14 @@ function checkInputs() {
 
   if (firstNameValue === '') {
     setError(firstNameInputEl, 'First name cannot be blank');
+  } else {
+    setSuccess(firstNameInputEl);
   }
 
   if (lastNameValue === '') {
     setError(lastNameInputEl, 'Last name cannot be blank');
+  } else {
+    setSuccess(lastNameInputEl);
   }
 
   if (emailValue === '') {
@@ -29,23 +33,35 @@ function checkInputs() {
   } else if (!isEmail(emailValue)) {
     setError(emailInputEl, 'Looks like this is not an email');
     emailInputEl.placeholder = 'email@example/com';
+  } else {
+    setSuccess(emailInputEl);
   }
 
   if (passwordValue === '') {
     setError(passwordInputEl, 'Password cannot be blank');
+  } else if (passwordValue.length < 6) {
+    setError(passwordInputEl, 'Password is too short');
+  } else {
+    setSuccess(passwordInputEl);
   }
 }
 
 function setError(input, message) {
+  input.value = '';
   const inputParent = input.parentElement;
   const smallEl = inputParent.querySelector('small');
-
-  // input.placeholder = '';
 
   smallEl.style.visibility = 'visible';
   smallEl.innerText = message;
 
   inputParent.className = 'form-control error';
+}
+
+function setSuccess(input) {
+  const inputParent = input.parentElement;
+  const smallEl = inputParent.querySelector('small');
+  smallEl.style.visibility = 'hidden';
+  inputParent.className = 'form-control';
 }
 
 function isEmail(email) {

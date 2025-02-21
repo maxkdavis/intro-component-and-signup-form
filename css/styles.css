@@ -1,6 +1,6 @@
 /*
 - Spacing System
-2 / 4 / 8 / 12 / 16 / 24/ 32/ 48 / 64 / 80/ 96/ 128
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96/ 128
 */
 
 * {
@@ -21,13 +21,12 @@ body {
   font-size: 1.6rem;
   color: #fff;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(250, 61, 61, 0.628), rgba(249, 49, 49, 0.658)),
+  background-image: linear-gradient(rgba(250, 61, 61, 0.607), rgba(249, 49, 49, 0.61)),
     url('/images/bg-intro-desktop.png');
 }
 
 section {
   padding: 8rem 4.8rem;
-  border: 1px solid green;
 }
 
 .container-grid {
@@ -118,6 +117,10 @@ section {
 
 .form-control.error input {
   border: 2px solid hsl(0, 100%, 74%);
+}
+
+.form-control.error input#email::placeholder {
+  color: hsl(0, 100%, 74%);
 }
 
 i.fa-circle-exclamation {
